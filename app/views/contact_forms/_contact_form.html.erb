@@ -1,0 +1,51 @@
+<h3>Send bulk mail</h3>
+
+<section class="row">
+
+    <%= simple_form_for @contact_form do |f| %>
+      <% if @contact_form.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= "#{pluralize(@contact_form.errors.count, 'error')} prohibited this document from being saved:" %>
+          </h2>
+          <ul>
+            <% @contact_form.errors.full_messages.each do |msg| %>
+              <li>
+                <%= msg %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="row">
+        <div class="col s6">
+          <%= f.input :role, required: true, label: 'Role', autofocus: true, collection: %w(assistant coach admin) %>
+        </div>
+        <div class="col s6">
+          <%= f.input :gender, required: true, label: 'Gender', autofocus: true, collection: %w(f m) %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6">
+          <%= f.check_box :accepted, type:"checkbox", id:"accepted", class: "filled-in" %>
+          <label class="strong color-black" for="accepted">¿Confirmado?</label>
+        </div>
+        <div class="col s6">
+          <%= f.input :subject, required: true, placeholder: t(:email_placeholder) %>
+        </div>
+      </div>
+      <div class="row center">
+        <div class="">
+          <%= f.input :message, as: :text, label: 'Message', placeholder: t(:message_placeholder) %>
+        </div>
+      </div>
+      <div class="row center">
+        <div class="col s12">
+          <%= f.submit :submit, class: 'btn' %>
+        </div>
+
+      </div>
+
+    <% end %>
+
+</section>
