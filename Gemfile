@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.3'
 
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.10'
 gem 'mongoid', '~> 5.1.0'
 gem 'mail_form'
 gem 'sass'
@@ -11,9 +11,10 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'bluecloth'
 gem 'haml-rails'
+# gem 'pry'
 gem 'pry-rails'
 gem 'rb-readline', require: false
-gem 'puma'
+gem 'puma', '3.12.0'
 gem 'materialize-sass'
 
 # Gems used only for assets and not required
@@ -29,9 +30,9 @@ group :assets do
 end
 
 
-group :test, :development do
-  gem 'jazz_hands', github: 'jkrmr/jazz_hands'
-end
+# group :test, :development do
+#   gem 'jazz_hands'
+# end
 
 group :development, :staging do
   gem 'binding_of_caller'
