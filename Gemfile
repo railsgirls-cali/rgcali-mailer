@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.3'
+ruby '2.3.5'
 
 gem 'rails', '4.2.10'
 gem 'mongoid', '~> 5.1.0'
@@ -15,7 +15,7 @@ gem 'haml-rails'
 gem 'pry-rails'
 gem 'rb-readline', require: false
 gem 'puma', '3.12.0'
-gem 'materialize-sass'
+gem 'materialize-sass', '0.97.7'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,9 +24,9 @@ group :assets do
   gem 'coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  gem 'mini_racer'
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 3.0.0'
 end
 
 
