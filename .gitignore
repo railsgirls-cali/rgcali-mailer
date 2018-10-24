@@ -22,7 +22,7 @@ config/mongoid.yml
 config/email_provider.yml
 people.csv
 possible_attendants.csv
-*.csv
+#*.csv
 seeds/
 *.DS_Store
 *.ods
